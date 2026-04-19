@@ -1,0 +1,107 @@
+.playback-controls {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background: var(--bg-primary);
+  margin-bottom: 2rem;
+}
+
+.scrubber-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.time-label {
+  font-variant-numeric: tabular-nums;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  width: 40px;
+  text-align: center;
+}
+
+.scrubber {
+  flex: 1;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  background: var(--bg-tertiary);
+  border-radius: 3px;
+  outline: none;
+}
+
+.scrubber::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--accent-secondary);
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.scrubber::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+.controls-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.media-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0 auto;
+}
+
+.btn-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: var(--text-primary);
+  background: var(--bg-tertiary);
+  transition: all 0.2s;
+}
+
+.btn-media:hover:not(:disabled) {
+  background: var(--border-color);
+}
+
+.btn-media:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-play {
+  width: 56px;
+  height: 56px;
+  background: var(--text-primary);
+  color: var(--bg-primary);
+}
+
+.btn-play:hover:not(:disabled) {
+  background: var(--accent-primary-hover);
+  transform: scale(1.05);
+}
+
+.speed-control {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.speed-select {
+  padding: 0.25rem 0.5rem;
+  height: auto;
+}
